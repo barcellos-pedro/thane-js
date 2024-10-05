@@ -1,10 +1,10 @@
-# Thane.js
+# Thane.js 🌌
 
 <img src="public/images/card.png" alt="thane stack illustrated logo" width="300"/>
 
-# Deliver simple web apps in an old fashion way!
+<br>
 
-> [Initial version](https://github.com/barcellos-pedro/poc-express-handlebars)
+*Deliver simple web apps in an old fashion way!*
 
 ## Story
 
@@ -26,3 +26,7 @@ I wanted to create an easy old fashion framework to build mvc web apps.
 - Tailwind
 - Sequelize
 - SQLite
+
+## Base version
+
+Check out the [Github repo](https://github.com/barcellos-pedro/poc-express-handlebars)
