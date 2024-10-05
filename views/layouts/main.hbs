@@ -4,21 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css" />
-    <script type="module" src="js/index.js"></script>
-    <title>Thane Stack</title>
+    <link rel="stylesheet" href='css/style-final.css' />
+    <script type="module" src='js/index.js' defer></script>
+    <!-- Third Party Scrpts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <title>Thane Stack - {{ title }}</title>
 </head>
 
-<body>
-    {{ >_nav }}
-    
-    <header></header>
+<body class="min-h-screen px-10 py-5" x-data>
+
+    {{> nav }}
+    {{> header }}
 
     <main>
         {{{ body }}}
     </main>
 
-    <footer></footer>
+    {{> footer }}
 </body>
 
 </html>

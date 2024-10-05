@@ -1,16 +1,31 @@
-// Router
+export default class Router {
+  routes = []
 
-// import express from "express";
+  static init() {
+    return new this()
+  }
 
-// const router = express.Router();
+  get(path, [routeController, action]) {
+    this.#addRoute({
+      method: "GET",
+      controller: routeController,
+      path,
+      action,
+    })
 
-// router.get("/", (req, res) => {
-//   res.render("index", {});
-// });
+    return this
+  }
 
-class Router {
-    static get(path, props){
-        const [controller, method] = props
+  registerRoutes(app) {
+    this.routes.forEach(({ path, action, controller }) => {
+      const routeController = new controller()
+      const handler = routeController[action]
+      app.use(path, handler)
+    })
+  }
 
-    }
+  #addRoute(routeProps) {
+    this.routes.push({ ...routeProps, middleware: "none" })
+    console.log("[Routes]\n", this.routes)
+  }
 }

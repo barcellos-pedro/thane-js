@@ -1,8 +1,12 @@
 import "dotenv/config"
 
-const CONFIG = {
+export const CONFIG = {
   port: process.env.PORT,
+  appName: "Demo App",
   database: {},
+  logger: {},
+  cache: {},
+  mailer: {},
 }
 
 export default function config({ key, defaultValue }) {

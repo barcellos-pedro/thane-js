@@ -1,50 +1,49 @@
 import express from "express"
 import config from "../config/config.js"
+import setupViewEngine from "./View.js"
+import Router from "../routes.js"
 
 export default class App {
-  #instance
-
   constructor() {
-    console.log("[Thane Stack] ☄️")
-
-    this.#instance = express()
-    this.port = config({ key: "port", defaultValue: 8080 })
-
-    this.start()
+    this.app = express()
+    this.router = Router
+    this.#bootstrap()
   }
 
   static new() {
     return new this()
   }
 
-  get app() {
-    return this.#instance
+  start(port = 800) {
+    this.port = config({ key: "port", defaultValue: port })
+    this.app.listen(this.port, () => this.startLog())
   }
 
-  start() {
-    this.app.listen(this.port, () =>
-      console.log(`⚡Application running on http://localhost:${this.port}`)
-    )
+  startLog() {
+    console.log(`⚡Application running on http://localhost:${this.port}`)
+  }
+
+  #initRoutes() {
+    this.router.registerRoutes(this.app)
+  }
+
+  #initMiddlewares() {
+    this.app.use(express.static("public"))
+    this.app.use(express.json())
+    this.app.use(express.urlencoded({ extended: false }))
+  }
+
+  #initViews() {
+    setupViewEngine((extname, engine) => {
+      this.app.engine(extname, engine)
+      this.app.set("view engine", extname)
+      this.app.set("views", "views")
+    })
+  }
+
+  #bootstrap() {
+    this.#initMiddlewares()
+    this.#initViews()
+    this.#initRoutes()
   }
 }
-
-// TODO: Register Middlewares
-
-// app.use(express.static("public"));
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: false }));
-
-// ----------------------------------------------
-
-// TODO: Set View Engine (Handlebars)
-
-// import hanblebars from "express-handlebars";
-
-// const hbs = hanblebars.create({
-//   extname: ".hbs",
-//   helpers,
-// });
-
-// app.engine(".hbs", hbs.engine);
-// app.set("view engine", ".hbs");
-// app.set("views", "views");

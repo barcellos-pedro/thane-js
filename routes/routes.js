@@ -1,1 +1,0 @@
-Router.get('', [Controller, 'method'])
