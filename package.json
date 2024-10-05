@@ -2,7 +2,7 @@
   "type": "module",
   "name": "thane-stack",
   "version": "1.0.0",
-  "description": "Deliver Web Apps in a simple old fashion way!",
+  "description": "Thane.js - Deliver simple web apps in an old fashion way!",
   "main": "index.js",
   "author": "github.com/barcellos-pedro",
   "license": "MIT",

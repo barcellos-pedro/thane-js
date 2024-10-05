@@ -1,4 +1,8 @@
-# Thane Stack
+# Thane.js
+
+<img src="public/images/card.png" alt="thane stack illustrated logo" width="300"/>
+
+# Deliver simple web apps in an old fashion way!
 
 > [Initial version](https://github.com/barcellos-pedro/poc-express-handlebars)
 
