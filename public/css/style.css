@@ -1,0 +1,14 @@
+:root {
+  color-scheme: light dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 10em;
+  min-height: 100vh;
+}
