@@ -2,6 +2,8 @@ import express from "express"
 import config from "../config/config.js"
 import Router from "../routes.js"
 import ViewEngine from "./ViewEngine.js"
+import NotFound from "../middlewares/NotFound.js"
+import Error from "../middlewares/Error.js"
 
 export default class App {
   constructor() {
@@ -41,5 +43,7 @@ export default class App {
     this.#initMiddlewares()
     this.#initViews()
     this.#initRoutes()
+    this.app.use(NotFound)
+    this.app.use(Error)
   }
 }
