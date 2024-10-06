@@ -1,8 +1,6 @@
 # Thane.js 🌌
 
-<img src="public/images/card.png" alt="thane stack illustrated logo" width="300"/>
-
-<br>
+![Thane.js illustrated card logo. Space with a lot of stars, plantes, cosmic clouds and a comet.](https://github.com/user-attachments/assets/bdec84cc-8d7a-4e99-97cf-65640077639e)
 
 *Deliver simple web apps in an old fashion way!*
 
