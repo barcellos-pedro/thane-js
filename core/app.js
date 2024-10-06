@@ -22,7 +22,7 @@ export default class App {
   }
 
   startLog() {
-    console.log(`⚡Application running on http://localhost:${this.port}`)
+    console.log(`\n⚡Application running on http://localhost:${this.port}\n`)
   }
 
   #initRoutes() {
