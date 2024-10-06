@@ -1,7 +1,7 @@
 import express from "express"
 import config from "../config/config.js"
-import setupViewEngine from "./View.js"
 import Router from "../routes.js"
+import ViewEngine from "./ViewEngine.js"
 
 export default class App {
   constructor() {
@@ -34,11 +34,7 @@ export default class App {
   }
 
   #initViews() {
-    setupViewEngine((extname, engine) => {
-      this.app.engine(extname, engine)
-      this.app.set("view engine", extname)
-      this.app.set("views", "views")
-    })
+    ViewEngine.setup(this.app)
   }
 
   #bootstrap() {
