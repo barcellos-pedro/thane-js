@@ -22,9 +22,19 @@ To provide that experience in a lean framework inspired in some tech stacks like
 |    Role     |     Name    |
 | ----------- | ----------- |
 | Runtime     |   Node.js   |
-| Back-end    |   Express   | 
+| Back-end    |   Express   |
 | Templating  |  Handlebars |
 | Front-end   |    Alpine   |
 | Styling     |   Tailwind  |
 | ORM         |   Sequelize |
 | Database    |    SQLite   |
+
+## Features
+
+- Battle tested MVC pattern
+- Built on top of Express
+- Seamless routing and controller with actions using laravel convention, *e.g index, show, create, store, edit, update, destroy*
+- ``config()`` helper to interact with ``.env`` properties.
+- Handlebars as template engine, with partials and layouts.
+- Alpine.js to complement front-end. *Think of it like jQuery for the modern web.*
+- Tailwind as utility-first CSS framework.
