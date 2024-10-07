@@ -10,8 +10,11 @@
 ## Story
 
 Based on what i knew about Node, Express, Django and Laravel, I wanted to exercise my knowledge.
+
 So I staterd to tinker around with some npm libraries [on a project](https://github.com/barcellos-pedro/poc-express-handlebars).
+
 After that i could only think about trying to build a new way of starting a new web app using Node and Express.
+
 To provide that experience in a lean framework inspired in some tech stacks like: Lamp, Mean, Mern and Tall.
 
 ## Technologies
