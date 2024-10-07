@@ -7,7 +7,7 @@
 
 *Deliver simple web apps in an old fashion way!*
 
-## Story
+## Quick Story
 
 Based on what i knew about Node, Express, Django and Laravel, I wanted to exercise my knowledge.
 
@@ -17,7 +17,7 @@ After that i could only think about trying to build a new way of starting a new 
 
 To provide that experience in a lean framework inspired in some tech stacks like: Lamp, Mean, Mern and Tall.
 
-## Technologies
+## Tech Stack
 
 |    Role     |     Name    |
 | ----------- | ----------- |
