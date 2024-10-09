@@ -16,7 +16,7 @@ export default class App {
     return new this()
   }
 
-  start(port = 800) {
+  start(port = 8080) {
     this.port = config({ key: "port", defaultValue: port })
     this.app.listen(this.port, () => this.startLog())
   }
